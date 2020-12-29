@@ -26,7 +26,11 @@
 \makeatother
 
 \definecolor{myblue}{rgb}{0.16,0.23,0.75}
-\setbeamercolor{linecolor}{fg=white,bg=myblue}
+\definecolor{spartanred}{RGB}{166,25,46}
+\definecolor{spartangold}{RGB}{197, 183, 131}
+\setbeamercolor{linecolor}{fg=black,bg=spartanred}
+
+
 
 % Set the page footline
 \makeatletter
@@ -52,22 +56,33 @@
 
 % Set the colors
 % Title Frame
-\setbeamercolor{title}{fg=blue,bg=yellow!50}
+\setbeamercolor{title}{fg=white,bg=spartanred}
 % Blocks
-%\setbeamercolor{block title example}{fg=black,bg=yellow!50}
-\setbeamercolor{frametitle}{fg=blue,bg=yellow!50}
+\setbeamercolor{frametitle}{fg=white,bg=spartanred}
+\setbeamercolor{block title}{fg=white,bg=black!50}
+\setbeamercolor{block title example}{fg=white,bg=spartangold}
+\setbeamercolor{block title alerted}{fg=white,bg=spartanred}
 
-\title[UCI Beamer]{A Beamer Template for anteaters!}
-\author[Peter]{Peter the Anteater}
-\institute[UCI]{Department of Computer Science, UC Irvine}
+% Flatbox added by Sajjad
+\definecolor{myred}{rgb}{0.75,0,0}
+\setbeamercolor{err_block_color}{fg=white,bg=spartanred}
+\setbeamercolor{normal_block_color}{fg=white,bg=black!60}
+\setbeamercolor{ex_block_color}{fg=black,bg=spartangold}
+\newenvironment{flatbox}[1]{\begin{beamercolorbox}[colsep*=.75ex,vmode]{#1}}{\end{beamercolorbox}}
+
+\setbeamercolor*{structure}{bg=white,fg=black}
+
+\title[SDSU Beamer]{A Beamer Template for Aztecs!}
+\author[Monte]{Montezuma}
+\institute[SDSU]{Department of Computer Science, San Diego State University}
 
 % A subtitle is optional and this may be deleted
-\subtitle{Zot Zot!}
+\subtitle{}
 
 % - Use the \inst command only if there are several affiliations.
 % - Keep it simple, no one is interested in your street address.
 
-\date{October 2017}
+\date{October 2020}
 % - Either use conference name or its abbreviation.
 % - Not really informative to the audience, more for people (including
 %   yourself) who are reading the slides online
@@ -108,8 +123,8 @@
 
 % Put UCI logo on top of pages
 \addtobeamertemplate{frametitle}{}{%
-\begin{textblock*}{100mm}(.92\textwidth,-0.8cm)
-\includegraphics[height=0.6cm,width=1.2cm]{uci.png}
+\begin{textblock*}{100mm}(.83\textwidth,-0.8cm)
+\includegraphics[height=0.6cm]{sdsu.png}
 \end{textblock*}}
 
 \begin{frame}{Outline}
@@ -127,6 +142,9 @@
 \begin{itemize}
 \item item 1
 \item item 2
+	\begin{enumerate}
+		\item subitem
+	\end{enumerate}
 \end{itemize}
 \begin{block}{A block}
 This is a normal block.
@@ -134,6 +152,9 @@ This is a normal block.
 \begin{example}
 This is how example blocks look.
 \end{example}
+\begin{alertblock}{Another block}
+This is how alerted blocks look.
+\end{alertblock}
 \end{frame}
 
 

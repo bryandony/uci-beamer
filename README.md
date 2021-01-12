@@ -1,2 +1,2 @@
-# uci-beamer
-UCI Themed Beamer Template
+# sdsu-beamer
+SDSU Themed Beamer Template adopted from uci-beamer
